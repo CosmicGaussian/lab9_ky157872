@@ -34,7 +34,7 @@ int hash(int x, int hashSz)
 // parses input file to an integer array
 int parseData(char* inputFileName, struct RecordType** ppData)
 {
-	FILE* inFile = fopen(inputFileName, "r");
+	FILE* inFile = fopen("lab9.inputtxt.txt.txt", "r");
 	int dataSz = 0;
 	int i, n;
 	char c;
@@ -116,7 +116,7 @@ int main(void)
 	struct RecordType *pRecords;
 	int recordSz = 0;
 
-	recordSz = parseData("input.txt", &pRecords);
+	recordSz = parseData("lab9.inputtxt.txt.txt", &pRecords);
 	printRecords(pRecords, recordSz);
 	// Your hash implementation
 
