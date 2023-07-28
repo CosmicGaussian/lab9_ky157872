@@ -129,11 +129,11 @@ int main(void)
         printf("Cannot allocate memory for the hash table.\n");
         exit(-1);
     }
-    hashTable.size = hashSz;
+    hashTable.size = 15;
 
     //Initializing the hash table
     int i;
-    for(i = 0; i < hashSz; i++)
+    for(i = 0; i < 15; i++)
     {
         struct RecordType *record = &pRecords[i];
         int index = hash(record->id, hashSz);
